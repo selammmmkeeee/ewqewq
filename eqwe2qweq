@@ -1,0 +1,162 @@
+local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
+
+local win = lib:Window("PREVIEW",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+
+local tab = win:Tab("Auto Farm")
+
+local tab1 = win:Tab("Teleports")
+
+local tab2 = win:Tab("Boosts")
+
+local tab3 = win:Tab("Codes")
+
+
+
+-- function
+function autotrain()
+    while _G.autotrain == true do
+        local ohString1 = "TrainingClick"
+
+        game:GetService("ReplicatedStorage").RemoteEvents.Detection:FireServer(ohString1)
+        wait(.000000001)
+      end
+   end
+
+
+-- function
+function autoFarm()
+    while _G.autoFarm == true do
+        game.ReplicatedStorage.premiumautoclick:FireServer()
+        game.ReplicatedStorage.normalclick:FireServer(true)
+        game.ReplicatedStorage.autoclick:FireServer()
+        game.ReplicatedStorage.premiumautoclick:FireServer()
+        game.ReplicatedStorage.normalclick:FireServer(true)
+        game.ReplicatedStorage.autoclick:FireServer()
+        wait(.000000001)
+      end
+   end
+
+tab:Label("Auto Farm")
+
+
+tab:Toggle("Auto Money",false, function(Value)
+    _G.autoFarm = Value    
+        autoFarm()  
+end)
+
+tab:Toggle("Auto Train",false, function(Value)
+    _G.autotrain = Value    
+        autotrain()  
+end)
+
+tab1:Label("Teleports")
+
+tab1:Button("Spawn", function()
+local ohString1 = "StarterTeleport"
+
+game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
+end)
+
+tab1:Button("Pirate Island", function()
+local ohString1 = "Zone1Teleport"
+
+game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
+end)
+
+tab1:Button("West City", function()
+local ohString1 = "Zone2Teleport"
+
+game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
+end)
+
+tab1:Button("Demon Village", function()
+local ohString1 = "Zone3Teleport"
+
+game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
+end)
+
+tab1:Button("Wall Maria", function()
+local ohString1 = "Zone4Teleport"
+
+game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
+end)
+
+tab1:Button("Z City", function()
+local ohString1 = "Zone5Teleport"
+
+game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
+end)
+
+tab1:Button("Hero City", function()
+local ohString1 = "Zone6Teleport"
+
+game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
+end)
+
+
+tab1:Button("Stardust Desert", function()
+local ohString1 = "Zone7Teleport"
+
+game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
+end)
+
+
+tab1:Button("Ghoul City", function()
+local ohString1 = "Zone8Teleport"
+
+game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
+end)
+
+tab1:Button("Boki Forest", function()
+local ohString1 = "Zone9Teleport"
+
+game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
+end)
+
+
+tab2:Button("Double Luck", function()
+
+end)
+
+
+tab2:Button("Double Gem", function()
+
+end)
+
+
+tab2:Button("Double Yen", function()
+
+end)
+
+tab2:Button("Mythic Luck", function()
+
+end)
+
+tab3:Button("ALL CODES", function()
+          local ohString1 = "TPC"
+game:GetService("ReplicatedStorage").CodeModule.EnterCode:InvokeServer(ohString1)
+local ohString1 = "RISK"
+game:GetService("ReplicatedStorage").CodeModule.EnterCode:InvokeServer(ohString1)
+local ohString1 = "RUSSO"
+game:GetService("ReplicatedStorage").CodeModule.EnterCode:InvokeServer(ohString1)
+local ohString1 = "KABASAKAL"
+game:GetService("ReplicatedStorage").CodeModule.EnterCode:InvokeServer(ohString1)
+local ohString1 = "AURAS"
+game:GetService("ReplicatedStorage").CodeModule.EnterCode:InvokeServer(ohString1)
+local ohString1 = "AURAASUPDAT3"
+game:GetService("ReplicatedStorage").CodeModule.EnterCode:InvokeServer(ohString1)
+local ohString1 = "ANIM3PLAYTIM3"
+game:GetService("ReplicatedStorage").CodeModule.EnterCode:InvokeServer(ohString1)
+end)
+
+
+
+
+
+
+
+local changeclr = win:Tab("Change UI Color")
+
+changeclr:Colorpicker("Change UI Color",Color3.fromRGB(44, 120, 224), function(t)
+lib:ChangePresetColor(Color3.fromRGB(t.R * 255, t.G * 255, t.B * 255))
+end)
