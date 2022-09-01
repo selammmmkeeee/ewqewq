@@ -10,6 +10,8 @@ local tab2 = win:Tab("Boosts")
 
 local tab3 = win:Tab("Codes")
 
+local tab4 = win:Tab("Auto Hatch")
+
 
 
 -- function
@@ -57,57 +59,57 @@ local ohString1 = "StarterTeleport"
 game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
 end)
 
-tab1:Button("Pirate Island", function()
+tab1:Button("Zone 1", function()
 local ohString1 = "Zone1Teleport"
 
 game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
 end)
 
-tab1:Button("West City", function()
+tab1:Button("Zone 2", function()
 local ohString1 = "Zone2Teleport"
 
 game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
 end)
 
-tab1:Button("Demon Village", function()
+tab1:Button("Zone 3", function()
 local ohString1 = "Zone3Teleport"
 
 game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
 end)
 
-tab1:Button("Wall Maria", function()
+tab1:Button("Zone 4", function()
 local ohString1 = "Zone4Teleport"
 
 game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
 end)
 
-tab1:Button("Z City", function()
+tab1:Button("Zone 5", function()
 local ohString1 = "Zone5Teleport"
 
 game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
 end)
 
-tab1:Button("Hero City", function()
+tab1:Button("Zone 6", function()
 local ohString1 = "Zone6Teleport"
 
 game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
 end)
 
 
-tab1:Button("Stardust Desert", function()
+tab1:Button("Zone 7", function()
 local ohString1 = "Zone7Teleport"
 
 game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
 end)
 
 
-tab1:Button("Ghoul City", function()
+tab1:Button("Zone 8", function()
 local ohString1 = "Zone8Teleport"
 
 game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
 end)
 
-tab1:Button("Boki Forest", function()
+tab1:Button("Zone 9", function()
 local ohString1 = "Zone9Teleport"
 
 game:GetService("ReplicatedStorage").zoneTeleport:FireServer(ohString1) 
@@ -150,7 +152,9 @@ game:GetService("ReplicatedStorage").CodeModule.EnterCode:InvokeServer(ohString1
 end)
 
 
+tab4:Toggle("INF Exclusive",false, function(x)
 
+end)
 
 
 
